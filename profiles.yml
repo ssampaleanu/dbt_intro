@@ -1,0 +1,18 @@
+my-snowflake-db:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: # snowflake acct to be used
+
+      # User/password auth
+      user: [username] #snowflake username
+      password: [password] # snowflake pwd
+
+      role: [user role] #role to be used by dbt
+      database: [database name] # db to be accessed
+      warehouse: [warehouse name] # snowflake wh name
+      schema: [dbt schema] # which schema of warehouse
+      threads: [1 or more] # assign number of threads to be used by running model
+      client_session_keep_alive: False
+      query_tag: [anything]
